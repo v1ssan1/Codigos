@@ -20,12 +20,22 @@ void real(){
 		cin >> a;
 		system("CLS");
 		
+		if(a >= 4){
+			cout << "Escolha invalida" << endl;
+			exit(0);
+		}
+		
 		cout << "1. Pedra" << endl;
 		cout << "2. Papel" << endl;
 		cout << "3. Tesoura" << endl;
 		
 		cout << "Jogador 2:\t" << endl;
 		cin >> b;
+		
+		if(b >= 4){
+			cout << "Escolha invalida" << endl;
+			exit(0);
+		}
 		
 		c++;
 	}
@@ -74,6 +84,12 @@ void pc(){
 		
 		cout << "Jogador:\t";
 		cin >> g;
+		
+		if(g >= 4){
+			cout << "Escolha invalida" << endl;
+			exit(0);
+		}
+		
 		j++;
 	}
 	if (g==h){
@@ -114,7 +130,6 @@ void pc(){
 int main(){
 	while(true){
 		
-		system("PAUSE");
 		system("CLS");
 		cout << "1. Jogar contra jogador" << endl;
 		cout << "2. Jogar contra uma AI" << endl;
