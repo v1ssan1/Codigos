@@ -1,0 +1,140 @@
+#include <iostream>
+#include <stdlib.h>
+#include <cstdio>
+#include <string>
+#include <cmath>
+#include <ctime>
+using namespace std;
+
+//pedra, papel e tesoura//
+
+void real(){
+	int a, b, c;
+	c = 0;
+	while (c != 1){
+		cout << "1. Pedra" << endl;
+		cout << "2. Papel" << endl;
+		cout << "3. Tesoura" << endl;
+		
+		cout << "Jogador 1:\t" << endl;
+		cin >> a;
+		system("CLS");
+		
+		cout << "1. Pedra" << endl;
+		cout << "2. Papel" << endl;
+		cout << "3. Tesoura" << endl;
+		
+		cout << "Jogador 2:\t" << endl;
+		cin >> b;
+		
+		c++;
+	}
+	if (a==b){
+		cout << "Empate";
+	}
+	if (a != b){
+		if(a==1, b==2){
+			cout << "Jogador 2 ganha" << endl;
+		}
+		else if (a==1, b==3){
+			cout << "Jogador 1 ganha" << endl;
+		}
+		else if (a==2, b==1){
+			cout << "Jogador 1 ganha" << endl;
+		}
+		else if (a==2, b==3){
+			cout << "Jogador 2 ganha" << endl;
+		}
+		else if (a==3, b==1){
+			cout << "Jogador 2 ganha" << endl;
+		}
+		else if (a==3, b==2) {
+			cout << "Jogador 1 ganha" << endl;
+		}
+		
+}
+	cout << endl << endl << "Escolha do jogador 1:\t" << a << endl;
+	cout << "Escolha do jogador 2:\t" << b << endl << endl;
+	cout << "==============================" << endl << endl;
+	cout << "Tabela de referencia:" << endl;
+	cout << "1. Pedra" << endl;
+	cout << "2. Papel" << endl;
+	cout << "3. Tesoura" << endl;
+}
+void pc(){
+	int g, h, j;
+	j = 0;
+	while (j == 0){
+		cout << "1. Pedra" << endl;
+		cout << "2. Papel" << endl;
+		cout << "3. Tesoura" << endl;
+		
+		srand(time(NULL));
+		h = rand()%3+1;
+		
+		cout << "Jogador:\t";
+		cin >> g;
+		j++;
+	}
+	if (g==h){
+		cout << "Empate";
+	}
+	if (g != h){
+		if(g==1, h==2){
+			cout << "O computador ganha";
+		}
+		else if (g==1, h==3){
+			cout << "Jogador ganha";
+		}
+		else if (g==2, h==1){
+			cout << "Jogador ganha";
+		}
+		else if (g==2, h==3){
+			cout << "O computador ganha";
+		}
+		else if (g==3, h==1){
+			cout << "O computador ganha";
+		}
+		else if (g==3, h==2){
+			cout << "Jogador ganha";
+		}
+		else {
+			cout << "Escolha invalida.";
+		}
+	}
+	cout << endl << endl << "Escolha do jogador:\t" << g << endl;
+	cout << "Escolha do computador:\t" << h << endl << endl;
+	cout << "==============================" << endl << endl;
+	cout << "Tabela de referencia:" << endl;
+	cout << "1. Pedra" << endl;
+	cout << "2. Papel" << endl;
+	cout << "3. Tesoura" << endl;
+}
+
+int main(){
+	while(true){
+		
+		system("PAUSE");
+		system("CLS");
+		cout << "1. Jogar contra jogador" << endl;
+		cout << "2. Jogar contra uma AI" << endl;
+		cout << "3. Sair" << endl;
+		
+		int i;
+		cin >> i;
+		switch(i){
+			case 1:
+				system ("CLS");
+				real();
+				break;
+			case 2:
+				system ("CLS");
+				pc();
+				break;
+			case 3:
+				return 0;
+			default:
+				cout << "Escolha invalida" << endl;
+		}
+	}
+}
