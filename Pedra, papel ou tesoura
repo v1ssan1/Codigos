@@ -129,7 +129,7 @@ void pc(){
 
 int main(){
 	while(true){
-		
+		system("PAUSE");
 		system("CLS");
 		cout << "1. Jogar contra jogador" << endl;
 		cout << "2. Jogar contra uma AI" << endl;
